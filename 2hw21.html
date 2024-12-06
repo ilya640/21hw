@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let partTreangle = '|_'
+        let i = 1;
+
+        while (i <= 10) {
+            console.log(partTreangle);
+            partTreangle += '|_';
+            i++;
+        }
+
+        let whiteBlack = "\u2B1C\u2B1B";
+        let blackWhite = "\u2B1B\u2B1C";
+
+        let sqare = "";
+
+        for (let str = 0; str < 8; str++) {
+            for (let clm = 0; clm < 4; clm++) {
+                if (str % 2 === 0) {
+                    sqare += whiteBlack;
+                } else {
+                    sqare += blackWhite;
+                }
+            }
+            sqare += "\n";
+        }
+        console.log(sqare)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        while (true) {
+            let userNumber1 = parseFloat(prompt("Введите первое число"));
+            let userNumber2 = parseFloat(prompt("Введите второе число"));
+
+            if (isNaN(userNumber1) || isNaN(userNumber2)) {
+                alert("Вы неправильно ввели данные, введите данные заново.");
+                continue;
+            }
+
+            let output = "";
+
+            output += "Первое число: ";
+            output += (userNumber1 % 2 === 0) ? "чётное, " : "нечётное, ";
+            output += (userNumber1 === Math.floor(userNumber1)) ? "целое, " : "дробное, ";
+            output += (userNumber1 > 0) ? "положительное." : (userNumber1 < 0) ? "отрицательное." : "ноль.";
+
+            output += "\nВторое число: ";
+            output += (userNumber2 % 2 === 0) ? "чётное, " : "нечётное, ";
+            output += (userNumber2 === Math.floor(userNumber2)) ? "целое, " : "дробное, ";
+            output += (userNumber2 > 0) ? "положительное." : (userNumber2 < 0) ? "отрицательное." : "ноль.";
+
+            if (userNumber1 > userNumber2) {
+                output += "\nПервое число больше второго.";
+            } else if (userNumber1 < userNumber2) {
+                output += "\nВторое число больше первого.";
+            } else {
+                output += "\nЧисла равны.";
+            }
+
+            console.log(output);
+            break;
+        }
+    </script>
+</body>
+
+</html>

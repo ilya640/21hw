@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        while (true) {
+            let surname = prompt("Введите фамилию").trim();
+            let name = prompt("Введите имя").trim();
+            let patronymic = prompt("Введите отчество").trim();
+            let age = parseFloat(prompt("Введите возраст").trim());
+            let gender = confirm("Ваш пол - мужской?");
+
+
+            if (!surname || !name || !patronymic || isNaN(age) || age <= 0) {
+                alert("Вы неправильно ввели данные, введите данные заново.");
+            } else {
+                let majority = "";
+                let pension = "";
+                let genderString = "";
+
+
+                if (age >= 18) {
+                    majority = "совершеннолетний";
+                } else {
+                    majority = "несовершеннолетний";
+                }
+
+
+                if (age > 59) {
+                    pension = "да";
+                } else {
+                    pension = "нет";
+                }
+
+
+                if (gender) {
+                    genderString = "мужской";
+                } else {
+                    genderString = "женский";
+                }
+
+
+                alert(`Ваш ФИО: ${surname} ${name} ${patronymic}\n` +
+                    `Ваш возраст в годах: ${age}\n` +
+                    `Ваш возраст в днях: ${Math.floor(age * 365)}\n` +
+                    `Вы ${majority}\n` +
+                    `Ваш пол: ${genderString}\n` +
+                    `Вы на пенсии: ${pension}`);
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
