@@ -17,7 +17,7 @@
             let gender = confirm("Ваш пол - мужской?");
 
 
-            if (!surname || !name || !patronymic || isNaN(age) || age <= 0) {
+            if (!surname || !name || !patronymic || isNaN(age) || age <= 0 || age > 150) {
                 alert("Вы неправильно ввели данные, введите данные заново.");
             } else {
                 let majority = "";
